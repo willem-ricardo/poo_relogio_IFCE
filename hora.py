@@ -46,6 +46,9 @@ class Hora:
             self.__segundo,
             "AM" if self.__hora < 12 else "PM")
     
+    def __lt__(self, hora):
+        return [self.__hora, self.__minuto, self.__segundo] > [hor]
+    
     ### Métodos utilitários
     def mais_um_segundo(self):
         self.__segundo += 1
