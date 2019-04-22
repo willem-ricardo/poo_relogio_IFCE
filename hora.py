@@ -62,3 +62,7 @@ class Hora:
                 if self.__hora == 24:
                     self.__hora = 0     
             
+    # Métodos de comparação
+    def __lt__(self, outra):
+        return [self.__hora, self.__minuto, self.__segundo] < [outra.__hora, outra.__minuto, outra.__segundo]
+    
